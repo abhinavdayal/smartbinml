@@ -6,6 +6,7 @@ import cv2
 import time
 from . import S3utils
 from django.conf import settings
+import datetime
 
 def prepareNet():
 	proto_data = open(settings.MEAN_FILE, "rb").read()
