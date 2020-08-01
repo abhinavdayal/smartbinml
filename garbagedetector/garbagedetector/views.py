@@ -4,6 +4,7 @@ from PIL import Image
 from io import BytesIO
 from . import classifier
 from base64 import b64decode
+from rest_framework import status
 
 # Create your views here.
 
