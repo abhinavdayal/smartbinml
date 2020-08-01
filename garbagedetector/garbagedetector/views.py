@@ -2,13 +2,14 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from PIL import Image
 from . import classifier
+from base64 import b64decode
 
 # Create your views here.
 
 class CaffeDetector(APIView):
     def post(self, request):
         try:
-            image = request.data['image']
+            image_data = b64decode(parser['data'])
             width = request.data['width']
             height = request.data['height']
             mode = request.data['mode']
