@@ -33,9 +33,6 @@ SECRET_KEY = 'ln%j^i*9mghcrb2*3ki6y51d=dn-&(@*n8*l8o5tq%0=omha(^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['smartbins.jistapi.ml']
-
-
 # Application definition
 
 INSTALLED_APPS = [
@@ -62,8 +59,9 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'garbagedetector.urls'
 
-ALLOWED_HOSTS = ['localhost', 'https://smart-bins-vitb.web.app/']
+ALLOWED_HOSTS = ['localhost', 'smartbins.jistapi.ml']
 CORS_ORIGIN_ALLOW_ALL = True
+#'https://smart-bins-vitb.web.app/'
 
 TEMPLATES = [
     {
