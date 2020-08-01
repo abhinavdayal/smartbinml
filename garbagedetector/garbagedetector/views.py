@@ -9,7 +9,7 @@ from base64 import b64decode
 class CaffeDetector(APIView):
     def post(self, request):
         try:
-            image_data = b64decode(parser['data'])
+            image_data = b64decode(request.data['data'])
             width = request.data['width']
             height = request.data['height']
             mode = request.data['mode']
