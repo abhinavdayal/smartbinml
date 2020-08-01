@@ -16,7 +16,7 @@ class CaffeDetector(APIView):
             mode = request.data['mode']
             
             sample = Image.open(BytesIO(image_data))
-            response = classifier.getPredictionsFor([sample], net, mean)
+            response = classifier.getPredictionsFor([sample])
             return Response(response, status=201)
         except Exception as e:
             return Response(e.__str__(), status.HTTP_400_BAD_REQUEST)
