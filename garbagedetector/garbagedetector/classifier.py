@@ -24,7 +24,7 @@ def resizeForFCN(image,size):
         return image.resize((int((227*w*size)/h),int(227*size)))
     
 def getSegmentedImage(test_image, probMap,thresh):
-    kernel = np.ones((6,6),np.uint8)
+    kernel = np.ones((6,6),dtype=uint8)
     wt,ht = test_image.size
     out_bn = np.zeros((ht,wt),dtype=uint8)
     
