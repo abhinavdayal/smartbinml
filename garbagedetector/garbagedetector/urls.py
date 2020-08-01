@@ -19,5 +19,5 @@ from . import views
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
-    path('uploadimage/', views.CaffeDetector.as_view(), name='detect'),
+    path('detect/', views.CaffeDetector.as_view(), name='detect'),
 ]
