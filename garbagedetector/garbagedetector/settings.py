@@ -60,10 +60,11 @@ MIDDLEWARE = [
 ROOT_URLCONF = 'garbagedetector.urls'
 
 ALLOWED_HOSTS = ['localhost', 'smartbins.jistapi.ml']
-CORS_ORIGIN_ALLOW_ALL = False
+
+CORS_ORIGIN_ALLOW_ALL = True
 
 CORS_ORIGIN_WHITELIST = [
-    'https://smart-bins-vitb.web.app/',
+    "https://smart-bins-vitb.web.app/",
     "http://localhost:4200",
 ]
 
