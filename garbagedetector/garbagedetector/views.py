@@ -11,9 +11,6 @@ class CaffeDetector(APIView):
     def post(self, request):
         try:
             image_data = b64decode(request.data['data'])
-            width = request.data['width']
-            height = request.data['height']
-            mode = request.data['mode']
             
             sample = Image.open(BytesIO(image_data))
             response = classifier.getPredictionsFor([sample])
